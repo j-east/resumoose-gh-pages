@@ -1,0 +1,1 @@
+var e={production:!0,webserver:"https://resumoose.com/",port:"443",apiUrl:"https://api.resumoose.com",mockmode:!1,version:"0.0.57",brand:{name:"ResuMoose",tagline:"Click OK. Send resume. Get hired.",primaryColor:"#007bff",logoPath:"",domain:"resumoose.com"}};export{e as a};

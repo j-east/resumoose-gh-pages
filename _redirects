@@ -1,0 +1,5 @@
+# Netlify redirects file (if using Netlify)
+# Handle Angular routing - redirect all requests to index.html unless they're for actual files
+# Allow static HTML files to be served directly
+/*.html   200
+/*    /index.html   200

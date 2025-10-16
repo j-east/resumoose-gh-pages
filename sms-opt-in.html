@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Opt-In - ResuMoose</title>
+    <meta name="description" content="Subscribe to SMS notifications from ResuMoose. Get updates and alerts directly to your phone.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .header h1 {
+            color: #007bff;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .brand-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+
+        .section h2 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .section li {
+            margin-bottom: 5px;
+        }
+
+        .opt-in-form {
+            background-color: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .opt-in-form h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+
+        .phone-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .opt-in-btn {
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .opt-in-btn:hover {
+            background-color: #1976d2;
+        }
+
+        .consent-text {
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand-name">FABERNOVUS</div>
+            <h1>SMS Opt-In</h1>
+            <p>Subscribe to receive SMS notifications and updates</p>
+        </div>
+
+        <div class="section">
+            <h2>How to Subscribe</h2>
+            <p>To opt-in to our SMS program, you can:</p>
+            <ul>
+                <li><strong>Text a keyword</strong> to our SMS number: <strong>+1 (855) 912-0384</strong></li>
+                <li><strong>Use the form below</strong> to request subscription</li>
+                <li><strong>Contact us directly</strong> at support@resumoose.com</li>
+            </ul>
+        </div>
+
+        <div class="opt-in-form">
+            <h3>Request SMS Subscription</h3>
+            <p>Enter your phone number to request SMS notifications:</p>
+            <input type="tel" class="phone-input" placeholder="(555) 123-4567" id="phoneInput">
+            <br>
+            <button class="opt-in-btn" onclick="requestOptIn()">Request SMS Subscription</button>
+            
+            <div class="consent-text">
+                <p><strong>By clicking "Request SMS Subscription", you consent to receive SMS messages from ResuMoose.</strong></p>
+                <p>Message frequency: Up to 5 messages per week. <span class="highlight">Message and data rates may apply.</span></p>
+                <p>You can opt out at any time by texting STOP to +1 (855) 912-0384.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What You'll Receive</h2>
+            <ul>
+                <li>Product updates and announcements</li>
+                <li>Service notifications and alerts</li>
+                <li>Account-related messages</li>
+                <li>Promotional offers (optional)</li>
+            </ul>
+            <p><strong>Message Frequency:</strong> Up to 5 messages per week, frequency may vary.</p>
+        </div>
+
+        <div class="section">
+            <h2>Opt-Out Instructions</h2>
+            <p>You can stop receiving SMS messages at any time:</p>
+            <ul>
+                <li><strong>Text STOP</strong> to +1 (855) 912-0384</li>
+                <li><strong>Text HELP</strong> for customer support</li>
+                <li><strong>Email us</strong> at support@resumoose.com</li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><strong>SMS Number:</strong> +1 (855) 912-0384</p>
+            <p><strong>Email:</strong> support@resumoose.com</p>
+            <p><strong>Business:</strong> ResuMoose</p>
+        </div>
+
+        <div class="section">
+            <h2>Terms and Privacy</h2>
+            <p>By participating in our SMS program, you agree to our:</p>
+            <ul>
+                <li><a href="/sms-terms.html" style="color: #007bff; text-decoration: none;">SMS Terms of Service</a></li>
+                <li><a href="/privacy.html" style="color: #007bff; text-decoration: none;">Privacy Policy</a></li>
+            </ul>
+            <p>This SMS program complies with TCPA and other applicable regulations.</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>ResuMoose SMS Program</strong></p>
+            <p>For questions about SMS services, contact support@resumoose.com</p>
+        </div>
+    </div>
+
+    <script>
+        function requestOptIn() {
+            const phoneInput = document.getElementById('phoneInput');
+            const phone = phoneInput.value.trim();
+            
+            if (!phone) {
+                alert('Please enter your phone number.');
+                return;
+            }
+            
+            // Basic phone validation
+            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+            const cleanPhone = phone.replace(/\D/g, '');
+            
+            if (cleanPhone.length < 10) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+            
+            // In a real implementation, this would send the request to your backend
+            alert(`Thank you! We've received your request to subscribe ${phone} to SMS notifications. You will receive a confirmation message shortly.`);
+            
+            // Clear the form
+            phoneInput.value = '';
+        }
+        
+        // Format phone number as user types
+        document.getElementById('phoneInput').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+            } else if (value.length >= 3) {
+                value = value.replace(/(\d{3})(\d{0,3})/, '($1) $2');
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>

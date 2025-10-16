@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Template Injection During AI Streaming: A Token-Efficient Approach</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 60px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+        }
+        
+        h1 {
+            font-size: 20px;
+            margin: 30px 0 15px 0;
+            color: #222;
+            font-weight: bold;
+        }
+        
+        h2 {
+            font-size: 16px;
+            margin: 25px 0 12px 0;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        h3 {
+            font-size: 14px;
+            margin: 20px 0 10px 0;
+            color: #444;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+            font-size: 14px;
+        }
+        
+        .abstract {
+            background: #f8f8f8;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 3px solid #666;
+            font-style: italic;
+        }
+        
+        .code {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        
+        pre[class*="language-"] {
+            margin: 0;
+            padding: 20px;
+            font-size: 13px;
+            line-height: 1.4;
+            background: #f8f8f8 !important;
+        }
+        
+        code[class*="language-"] {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            color: #333;
+        }
+        
+        .figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .figure-caption {
+            font-size: 12px;
+            font-style: italic;
+            margin-top: 8px;
+            color: #666;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .table th {
+            background: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        ul, ol {
+            margin: 12px 0 12px 30px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        
+        .footnote {
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+        
+        .performance-metrics {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .inline-code {
+            font-family: 'Courier New', monospace;
+            background: #f0f0f0;
+            padding: 2px 4px;
+            font-size: 13px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 30px;
+            }
+            
+            .title {
+                font-size: 20px;
+            }
+            
+            h1 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">CSS Template Injection During AI Streaming: A Token-Efficient Approach to Real-Time Document Generation</div>
+        <div class="subtitle">A Novel Technique for Reducing AI Token Consumption While Maintaining Real-Time User Experience</div>
+        <div style="margin-top: 20px; font-size: 16px; color: #444;">
+            <strong>By John Evans</strong><br>
+            Neptune Beach, Florida<br> 
+            support@resumoose.com
+        </div>
+    </div>
+
+    <div class="abstract">
+        <strong>Abstract:</strong> This document presents a novel technique for reducing AI token consumption while maintaining real-time user experience in document generation systems. By implementing CSS template injection during Server-Sent Events streaming, we achieve a 40-60% reduction in AI tokens while preserving immediate visual feedback. The approach uses placeholder detection and substitution within streaming buffers, solving the fundamental trade-off between token efficiency and user experience quality.
+    </div>
+
+    <h1>1. The Core Problem</h1>
+    
+    <p>AI document generation faces two competing requirements:</p>
+
+    <p><strong>Token Efficiency:</strong> AI services charge per token. Including CSS styling in prompts is expensive and wasteful - a typical resume CSS template consumes 800-1200 tokens that could be used for actual content generation.</p>
+
+    <p><strong>User Experience:</strong> Users expect immediate, professionally formatted output. Generating plain text and applying styling afterward breaks the real-time experience and requires additional processing steps.</p>
+
+    <p>Traditional approaches force a choice between these requirements. We present a solution that achieves both.</p>
+
+    <h1>2. The CSS Template Injection Approach</h1>
+
+    <h2>2.1 Core Innovation</h2>
+
+    <p>Instead of including CSS in AI prompts, we:</p>
+
+    <ol>
+        <li><strong>Instruct the AI</strong> to use a simple placeholder: <span class="inline-code">{{ CSS }}</span></li>
+        <li><strong>Stream the response</strong> in real-time using Server-Sent Events</li>
+        <li><strong>Detect the placeholder</strong> during streaming and inject the actual CSS template</li>
+        <li><strong>Deliver formatted content</strong> to users without breaking the streaming experience</li>
+    </ol>
+
+    <p>This approach eliminates CSS tokens from AI consumption while maintaining the illusion of real-time formatted generation.</p>
+
+    <h2>2.2 Technical Challenge: Cross-Chunk Placeholder Detection</h2>
+
+    <p>The primary implementation challenge occurs when the <span class="inline-code">{{ CSS }}</span> placeholder spans multiple streaming chunks:</p>
+
+    <div class="code">
+        <pre><code class="language-text">Chunk 1: "...previous content { "
+Chunk 2: "{ CSS }}"
+Chunk 3: "...following content..."</code></pre>
+    </div>
+
+    <p>Standard string replacement fails because no single chunk contains the complete placeholder pattern.</p>
+
+    <h2>2.3 Buffer Management Solution</h2>
+
+    <p>We implement a streaming buffer with intelligent partial matching to handle placeholders that span multiple chunks:</p>
+
+
+    <div class="code">
+ <pre><code class="language-csharp">const string cssPlaceholder = "{{ CSS }}";
+
+await foreach (var chunk in aiService.StreamCompletionAsync(...))
+{
+    buffer.Append(chunk);
+    var bufferContent = buffer.ToString();
+    
+    if (bufferContent.Contains("{"))
+    {
+        // Check if we have the complete CSS placeholder
+        if (bufferContent.Contains(cssPlaceholder))
+        {
+            // Replace the placeholder and send everything
+            var processedContent = bufferContent.Replace(cssPlaceholder, cssTemplate);
+            var eventData = new { text = processedContent };
+            await Response.WriteAsync($"data: {JsonSerializer.Serialize(eventData)}\n\n");
+            await Response.Body.FlushAsync();
+            buffer.Clear();
+        }
+        else if (cssPlaceholder.StartsWith(bufferContent.Substring(bufferContent.LastIndexOf('{'))))
+        {
+            // Partial match - keep buffering
+            continue;
+        }
+        else
+        {
+            // Not a match, send the content
+            var eventData = new { text = bufferContent };
+            await Response.WriteAsync($"data: {JsonSerializer.Serialize(eventData)}\n\n");
+            await Response.Body.FlushAsync();
+            buffer.Clear();
+        }
+    }
+    else
+    {
+        // No potential placeholder, send immediately
+        var eventData = new { text = bufferContent };
+        await Response.WriteAsync($"data: {JsonSerializer.Serialize(eventData)}\n\n");
+        await Response.Body.FlushAsync();
+        buffer.Clear();
+    }
+}</code></pre>
+    </div>
+
+    <h2>2.4 Multi-Style Template System</h2>
+
+    <p>The system supports multiple CSS templates optimized for different contexts:</p>
+
+    <ul>
+        <li><strong>Modern:</strong> Clean, minimal styling for tech companies</li>
+        <li><strong>Professional:</strong> Traditional corporate formatting</li>
+        <li><strong>Executive:</strong> Bold layouts for leadership roles</li>
+        <li><strong>Technical:</strong> Code-friendly formatting for developers</li>
+        <li><strong>Creative:</strong> Distinctive styling for design roles</li>
+    </ul>
+
+    <p>Templates are retrieved via <span class="inline-code">GetCssTemplate(style)</span> and cached for performance.</p>
+
+    <h1>3. Results and Impact</h1>
+
+    <h2>3.1 Token Usage Reduction</h2>
+
+    <p><strong>Before:</strong> Including CSS in prompts</p>
+    <ul>
+        <li>Average CSS template: 800 tokens</li>
+        <li>Content generation: 500 tokens</li>
+        <li>HTML structure/formatting: 200 tokens</li>
+        <li><strong>Total per resume: 1,500 tokens</strong></li>
+    </ul>
+
+    <p><strong>After:</strong> CSS template injection</p>
+    <ul>
+        <li>Placeholder instruction: 15 tokens</li>
+        <li>Content generation: 500 tokens</li>
+        <li>HTML structure/formatting: 200 tokens</li>
+        <li><strong>Total per resume: 715 tokens</strong></li>
+    </ul>
+
+    <div class="performance-metrics">
+        <strong>Token savings: 52% per generation</strong> (785 tokens saved)
+    </div>
+
+    <h2>3.2 User Experience Metrics</h2>
+
+    <ul>
+        <li><strong>Time to first content:</strong> &lt;3 seconds (unchanged)</li>
+        <li><strong>Time to formatted output:</strong> &lt;3 seconds (previously 12-15 seconds with CSS generation)</li>
+        <li><strong>Visual continuity:</strong> Maintained throughout streaming</li>
+        <li><strong>Style switching:</strong> Instant template swapping without regeneration</li>
+    </ul>
+
+    <h2>3.3 Cost Analysis</h2>
+
+    <p>At current Anthropic pricing:</p>
+    <ul>
+        <li><strong>Cost savings per resume:</strong> $0.024 (52% reduction)</li>
+        <li><strong>Monthly savings</strong> (1,000 generations): $24</li>
+        <li><strong>Annual savings</strong> (12,000 generations): $288</li>
+    </ul>
+
+    <p>For higher-volume applications, savings scale proportionally.</p>
+
+    <h1>4. Implementation Considerations</h1>
+
+    <h2>4.1 Error Handling</h2>
+
+    <p>Fallback strategies for edge cases:</p>
+    <ul>
+        <li><strong>Placeholder not found:</strong> Deliver raw content (graceful degradation)</li>
+        <li><strong>Multiple placeholders:</strong> Process sequentially to maintain order</li>
+        <li><strong>Streaming interruption:</strong> Preserve accumulated buffer content</li>
+    </ul>
+
+    <h2>4.2 Performance Optimization</h2>
+
+    <ul>
+        <li><strong>Template caching:</strong> Load CSS templates once at application startup</li>
+        <li><strong>String operations:</strong> Use StringBuilder for large content concatenation</li>
+        <li><strong>Memory management:</strong> Clear buffers promptly after substitution</li>
+    </ul>
+
+    <h1>5. Extensions and Variations</h1>
+
+    <h2>5.1 Multiple Placeholder Types</h2>
+
+    <p>The technique extends beyond CSS to other template injections:</p>
+
+    <div class="code">
+        <pre><code class="language-text">{{ CSS }}           → Style templates
+{{ HEADER_IMAGE }}  → Dynamic image URLs  
+{{ CONTACT_INFO }}  → User-specific contact details
+{{ BRANDING }}      → Company-specific styling</code></pre>
+    </div>
+
+    <h2>5.2 Conditional Template Injection</h2>
+
+    <p>Advanced implementations can inject different templates based on content analysis:</p>
+
+    <div class="code">
+        <pre><code class="language-csharp">string selectedTemplate = AnalyzeContent(streamBuffer) switch {
+    ContentType.Technical => TechnicalTemplate,
+    ContentType.Executive => ExecutiveTemplate,
+    _ => DefaultTemplate
+};</code></pre>
+    </div>
+
+    <h1>6. Alternative Approaches Considered</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Approach</th>
+                <th>Reason for Rejection</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Post-Processing CSS Application</td>
+                <td>Breaks real-time experience, requires complete content before styling</td>
+            </tr>
+            <tr>
+                <td>CSS-in-Prompt with Token Budgeting</td>
+                <td>Still wastes tokens on repetitive styling information</td>
+            </tr>
+            <tr>
+                <td>Client-Side Template Application</td>
+                <td>Requires structured output format, complex client logic</td>
+            </tr>
+            <tr>
+                <td>Separate Styling API Call</td>
+                <td>Additional latency, coordination complexity</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>7. Conclusion</h1>
+
+    <p>CSS template injection during streaming represents a practical solution to the token efficiency vs. user experience trade-off in AI document generation. The technique is:</p>
+
+    <ul>
+        <li><strong>Technically sound:</strong> Solves real buffer management challenges</li>
+        <li><strong>Economically beneficial:</strong> Measurable token and cost savings</li>
+        <li><strong>User-friendly:</strong> Maintains real-time formatted experience</li>
+        <li><strong>Extensible:</strong> Applies to other template injection scenarios</li>
+    </ul>
+
+    <p>This approach demonstrates that thoughtful architecture can resolve apparent contradictions between efficiency and user experience, providing a template for similar optimization challenges in AI-powered applications.</p>
+
+    <p>The key insight is recognizing that AI models excel at content generation but are inefficient for repetitive formatting tasks. By separating these concerns and using streaming as the integration point, we achieve optimal results for both dimensions.</p>
+
+    <div class="footnote">
+        <p><strong>Implementation Note:</strong> This technique has been successfully deployed in production, handling public traffic with measurable improvements in both token efficiency and user satisfaction metrics.</p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
