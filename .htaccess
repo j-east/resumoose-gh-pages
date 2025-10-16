@@ -2,12 +2,13 @@
 # Enable rewrite engine
 RewriteEngine On
 
-# Handle Angular routes
-# If the request is for a file or directory that exists, serve it
+# Serve static HTML files directly
+RewriteCond %{REQUEST_URI} \.html$
+RewriteRule ^ - [L]
+
+# Handle Angular app routes (redirect to app.html for Angular routes)
+# Only rewrite if the file/directory doesn't exist
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# Don't rewrite requests for .html files (let them be served as static files)
-RewriteCond %{REQUEST_URI} !\.html$
-
-# Otherwise, serve index.html for all routes
-RewriteRule ^.*$ index.html [L]
+# Rewrite Angular app routes to app.html
+RewriteRule ^(login|signup|dashboard|profile|mobile|desktop|app|ai-tools|resume|admin|invite|demo|implementation|gains-calculator|founders|news|maintenance|webhook)(/.*)?$ app.html [L]
