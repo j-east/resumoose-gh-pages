@@ -2,13 +2,14 @@
 # Enable rewrite engine
 RewriteEngine On
 
-# Serve static HTML files directly
+# Serve static HTML files directly (except app.html which is the Angular app)
 RewriteCond %{REQUEST_URI} \.html$
+RewriteCond %{REQUEST_URI} !^/app\.html$
 RewriteRule ^ - [L]
 
-# Handle Angular app routes (redirect to app.html for Angular routes)
+# Handle Angular app routes
 # Only rewrite if the file/directory doesn't exist
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# Rewrite Angular app routes to app.html
-RewriteRule ^(login|signup|dashboard|profile|mobile|desktop|app|ai-tools|resume|admin|invite|demo|implementation|gains-calculator|founders|news|maintenance|webhook)(/.*)?$ app.html [L]
+# Rewrite all other routes to app.html (the Angular app)
+RewriteRule ^.*$ app.html [L]
