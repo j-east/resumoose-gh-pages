@@ -851,6 +851,76 @@
             }
         }
 
+        /* Journey Section */
+        .journey {
+            background: linear-gradient(135deg, rgba(248, 246, 240, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+            padding: 6rem 0;
+            border-top: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .journey::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(107, 207, 127, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .journey-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .journey-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .journey-content p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--dark);
+            margin-bottom: 1.75rem;
+            font-weight: 400;
+        }
+
+        .journey-content p:last-child {
+            margin-bottom: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 2px solid rgba(212, 175, 55, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .journey-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .journey-content p {
+                font-size: 1.1rem;
+            }
+
+            .journey-content p:first-child,
+            .journey-content p:last-child {
+                font-size: 1.2rem;
+            }
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -908,6 +978,27 @@
         <div class="container">
             <!-- Angular Elements Resume Widget -->
             <resume-viewer></resume-viewer>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey">
+        <div class="journey-container">
+            <div class="journey-content">
+                <p>Look, we get it. It's Sunday night and you're staring at another job posting that could be perfect for you. But first, you need to rewrite your resume. Again. For the 47th time this month.</p>
+                
+                <p>You know you're qualified. You've done incredible work. But somehow, translating that into a resume that actually shows your value? That's the hard part. And honestly, it shouldn't be.</p>
+                
+                <p>Here's the thing: you're not the problem. Your experience is valuable. The problem is that resumes are a translation exercise, and most of us are terrible translators of our own work.</p>
+                
+                <p>What if it didn't have to be this way? What if your resume could evolve with you? What if tailoring it for each opportunity took minutes instead of hours? What if you never had to start from scratch again?</p>
+                
+                <p>That's what we built. Your complete career history lives in one place. When you find an opportunity, our AI finds the relevant pieces and shows you how to tell that story. You review, refine, and send. We handle the heavy lifting.</p>
+                
+                <p>This isn't about manufacturing accomplishments or making stuff up. It's about helping you see and articulate the impact you've already made. The projects you forgot about. The problems you solved. The value you created.</p>
+                
+                <p>Your story deserves to be told well. Let us help.</p>
+            </div>
         </div>
     </section>
 
