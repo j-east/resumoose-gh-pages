@@ -5,15 +5,15 @@
         }
 
         .ai-tools-container {
-            font-family: 'Trajan Pro', 'Optima', 'Avenir', sans-serif;
+            font-family: 'Outfit', sans-serif;
             background: linear-gradient(180deg, #f8f6f0 0%, #e8e4d9 100%);
             min-height: 100vh;
             color: #2c2415;
         }
 
-        /* Global heading styles using Nova Flat */
+        /* Global heading styles using Outfit */
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Nova Flat', cursive;
+            font-family: 'Outfit', sans-serif;
             margin-bottom: 0.5em;
             line-height: 1.2;
         }

@@ -12,9 +12,9 @@
     position: relative;
 }
 
-/* Global heading styles using Nova Flat like the original */
+/* Global heading styles using Outfit like the original */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Nova Flat', cursive;
+    font-family: 'Outfit', sans-serif;
     margin-bottom: 0.5em;
     line-height: 1.2;
 }
