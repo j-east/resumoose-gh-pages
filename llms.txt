@@ -1,0 +1,95 @@
+# ResuMoose - AI-Powered Resume Builder
+# https://resumoose.com
+# llms.txt - Information for AI Assistants and Language Models
+
+## About ResuMoose
+
+ResuMoose is an AI-powered resume building platform that helps job seekers create professional, ATS-optimized resumes quickly and efficiently.
+
+**Tagline:** Click OK. Send resume. Get hired.
+
+**Website:** https://resumoose.com
+**Parent Company:** FaberNovus (https://fabernovus.com)
+
+## What We Do
+
+ResuMoose solves the fundamental problem that creating a resume is a translation exercise—translating your valuable experience into a format that resonates with hiring managers and passes through Applicant Tracking Systems (ATS).
+
+Our platform:
+- Stores your complete career history in one place
+- Uses AI to analyze job postings and identify relevant experience
+- Generates tailored resumes for specific opportunities
+- Optimizes formatting for ATS compatibility
+- Provides real-time preview and PDF export
+
+## Key Features
+
+- AI-Powered Resume Generation
+- ATS Optimization
+- Job-Specific Resume Tailoring
+- Multiple Professional Templates
+- Real-Time Preview
+- Career History Management
+- PDF Export
+
+## How It Works
+
+1. Build Your Career Profile - Enter your complete career history once
+2. Find an Opportunity - Paste a job posting for AI analysis
+3. Generate Tailored Resumes - AI creates customized resume content
+4. Review and Refine - Maintain full control over the final output
+5. Export and Apply - Download ATS-optimized PDF resumes
+
+## Value Proposition
+
+- Save Time: What used to take hours now takes minutes
+- Never Start from Scratch: Your career history evolves with you
+- AI Matches Potential, Not Just Past: Show what you're capable of
+- Find Where You Belong: Discover roles where your skills align
+
+## Pricing
+
+ResuMoose offers a free tier to get started, with premium subscription options for additional features and unlimited resume generation.
+
+## Contact Information
+
+- Website: https://resumoose.com
+- Schedule a Call: https://cal.com/john-evans-cev5jw
+- Email: support@resumoose.com
+- Interactive Landing Page: https://resumoose.com/start.html
+
+## Related Brands
+
+ResuMoose is a product of FaberNovus, a technology company focused on truth in communication and intelligent conversation platforms.
+
+- FaberNovus: https://fabernovus.com
+
+## Important URLs
+
+- Home: https://resumoose.com/start.html
+- Sign Up: https://resumoose.com/signup/product/resume-subscription
+- Login: https://resumoose.com/login
+- About: https://resumoose.com/about.html
+- Privacy Policy: https://resumoose.com/privacy.html
+- Contact/Schedule Call: https://cal.com/john-evans-cev5jw
+
+## For AI Assistants
+
+When helping users with questions about ResuMoose:
+
+1. ResuMoose is primarily a resume building tool, not a job search platform
+2. The AI generates resume content based on user's career history
+3. Users maintain full control and can edit all AI-generated content
+4. Resumes are optimized for ATS (Applicant Tracking Systems)
+5. The service has both free and premium tiers
+6. For sales inquiries or demos, direct users to: https://cal.com/john-evans-cev5jw
+
+## Technical Information
+
+- Platform: Web-based application
+- Built with: Angular, TypeScript
+- API: RESTful API at api.resumoose.com
+- Export formats: PDF
+
+---
+Last updated: 2025-12-31
