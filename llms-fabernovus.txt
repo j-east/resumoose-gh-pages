@@ -1,0 +1,37 @@
+# FaberNovus
+
+> Technology company focused on truth in communication and intelligent conversation platforms.
+
+## What is FaberNovus?
+
+FaberNovus is a technology company building AI-powered tools that help people communicate more effectively. Our flagship product is ResuMoose, an AI-powered resume builder.
+
+## Primary URL
+
+https://fabernovus.com
+
+## Products
+
+### ResuMoose (https://resumoose.com)
+AI-powered resume builder that helps job seekers create professional, ATS-optimized resumes. Users enter their career history once, then generate tailored resumes for specific job opportunities.
+
+## Core Values
+
+- Truth in communication
+- User control over AI-generated content
+- No dark patterns or manipulative design
+- Privacy-first approach
+
+## Contact
+
+- Website: https://fabernovus.com
+- Schedule a meeting: https://cal.com/john-evans-cev5jw
+- Email: john@fabernovus.com
+
+## Founder
+
+John Evans - Independent developer focused on building ethical AI tools.
+
+## Related Sites
+
+- ResuMoose: https://resumoose.com
