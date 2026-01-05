@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the founders of ResuMoose - the team behind the AI-powered resume building platform.">
+    <meta name="keywords" content="ResuMoose, founders, team, AI resume builder, about us">
+    <meta name="author" content="ResuMoose">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://resumoose.com/founders">
+    <meta property="og:title" content="Founders | ResuMoose">
+    <meta property="og:description" content="Meet the team behind ResuMoose - AI-powered resume building platform.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://resumoose.com/founders">
+    <meta property="twitter:title" content="Founders | ResuMoose">
+    <meta property="twitter:description" content="Meet the team behind ResuMoose - AI-powered resume building platform.">
+    
+    <title>Founders | ResuMoose - AI Resume Builder</title>
+    
+    <!-- Import Outfit font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .founders-container {
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .hero-header {
+            padding: 1.5rem 2rem;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: #d4af37;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #d4af37;
+        }
+
+        .enter-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #1a1a2e;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Main Content */
+        .founders-main {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .founders-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Founders Grid */
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .founder-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .founder-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .founder-name {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-title {
+            color: #d4af37;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .founder-bio {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .mission-title {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        .founders-footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .founders-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="founders-container">
+        <!-- Header -->
+        <header class="hero-header">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <h1>RESUMOOSE</h1>
+                    </a>
+                </div>
+                <nav class="header-nav">
+                    <a href="/ai-tools" class="nav-link">AI TOOLS</a>
+                    <a href="/request-invite" class="nav-link">REQUEST INVITE</a>
+                    <a href="/news" class="nav-link">NEWS</a>
+                    <a href="/founders" class="nav-link active">FOUNDERS</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="/" class="enter-btn">HOME</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="founders-main">
+            <div class="founders-hero">
+                <h1 class="section-title">MEET THE FOUNDERS</h1>
+                <p class="hero-subtitle">The team behind ResuMoose</p>
+            </div>
+
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-avatar">👨‍💻</div>
+                    <h2 class="founder-name">John Evans</h2>
+                    <p class="founder-title">Founder & CEO</p>
+                    <p class="founder-bio">
+                        Building AI-powered tools that help people discover and articulate their professional value. 
+                        Passionate about making career development accessible to everyone.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mission-section">
+                <h2 class="mission-title">Our Mission</h2>
+                <p class="mission-text">
+                    At ResuMoose, we believe everyone has unique professional value that deserves to be recognized. 
+                    Our AI-powered platform helps you discover, articulate, and present your skills and experiences 
+                    in the most compelling way possible. We're building the future of career development, one resume at a time.
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="founders-footer">
+            <p class="footer-text">© 2025 ResuMoose. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

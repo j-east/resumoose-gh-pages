@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to ResuMoose - Access your AI-powered resume builder account with phone verification.">
+    <meta name="keywords" content="ResuMoose, login, sign in, AI resume builder, account access">
+    <meta name="author" content="ResuMoose">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://resumoose.com/login">
+    <meta property="og:title" content="Login | ResuMoose">
+    <meta property="og:description" content="Sign in to your ResuMoose account and continue building your perfect resume.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://resumoose.com/login">
+    <meta property="twitter:title" content="Login | ResuMoose">
+    <meta property="twitter:description" content="Sign in to your ResuMoose account and continue building your perfect resume.">
+    
+    <title>Login | ResuMoose - AI Resume Builder</title>
+    
+    <!-- Import Outfit font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 2rem;
+        }
+
+        .login-main {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .login-hero {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-title:hover {
+            color: #f4d03f;
+        }
+
+        .login-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+        }
+
+        .form-input {
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .login-mode-toggle {
+            text-align: center;
+            margin-top: -0.5rem;
+        }
+
+        .toggle-link {
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .toggle-link:hover {
+            color: #f4d03f;
+            text-decoration: underline;
+        }
+
+        .action-buttons {
+            margin-top: 0.5rem;
+        }
+
+        .primary-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #1a1a2e;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .primary-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #d4af37;
+        }
+
+        .separator {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .privacy-notice {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .privacy-notice p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .error-message {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: rgba(220, 53, 69, 0.2);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            border-radius: 8px;
+            color: #ff6b6b;
+            font-size: 0.9rem;
+        }
+
+        .info-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 1rem;
+            }
+
+            .login-main {
+                padding: 1.5rem;
+            }
+
+            .login-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <main class="login-main">
+            <section class="login-hero">
+                <a href="/" class="login-title">RESUMOOSE</a>
+                <p class="login-subtitle">Login with Phone</p>
+            </section>
+
+            <section class="form-section">
+                <div class="form-container">
+                    <form id="loginForm" action="https://resumoose.com/api/login/phone" method="POST">
+                        <div class="input-group">
+                            <label for="emailAddress">Email Address *</label>
+                            <input
+                                id="emailAddress"
+                                name="emailAddress"
+                                type="email"
+                                placeholder="your.email@example.com"
+                                autocomplete="email"
+                                autocapitalize="off"
+                                required
+                                class="form-input">
+                        </div>
+
+                        <div class="login-mode-toggle">
+                            <a href="#" class="toggle-link" onclick="toggleLoginMode(event)">Use display name instead</a>
+                        </div>
+
+                        <div class="input-group" style="margin-top: 1rem;">
+                            <label for="phoneNumber">Phone Number *</label>
+                            <input
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                type="tel"
+                                placeholder="+1 (555) 123-4567"
+                                autocomplete="tel"
+                                required
+                                class="form-input">
+                        </div>
+
+                        <div class="action-buttons" style="margin-top: 1.5rem;">
+                            <button type="submit" class="primary-btn">
+                                Send Code
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="footer-links">
+                        <a href="/" class="footer-link">Home</a>
+                        <span class="separator">•</span>
+                        <a href="/about" class="footer-link">About</a>
+                        <span class="separator">•</span>
+                        <a href="/request-invite" class="footer-link">Sign Up</a>
+                    </div>
+                    
+                    <div class="privacy-notice">
+                        <p>We use cookies to authenticate this app. We don't track you across sites - this is used to enable secure access and keep your data safe.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function toggleLoginMode(event) {
+            event.preventDefault();
+            const emailGroup = document.querySelector('div:has(#emailAddress)');
+            const toggleLink = document.querySelector('.toggle-link');
+            
+            if (emailGroup.style.display === 'none') {
+                emailGroup.style.display = 'flex';
+                toggleLink.textContent = 'Use display name instead';
+            } else {
+                emailGroup.style.display = 'none';
+                toggleLink.textContent = 'Use email address instead';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ResuMoose News - Latest updates on AI-powered resume building, product demos, and pilot program announcements.">
+    <meta name="keywords" content="ResuMoose, AI resume builder, news, updates, product demo, pilot program">
+    <meta name="author" content="ResuMoose">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://resumoose.com/news">
+    <meta property="og:title" content="ResuMoose News - Latest Updates">
+    <meta property="og:description" content="Stay updated with the latest news from ResuMoose - AI-powered resume building platform.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://resumoose.com/news">
+    <meta property="twitter:title" content="ResuMoose News - Latest Updates">
+    <meta property="twitter:description" content="Stay updated with the latest news from ResuMoose - AI-powered resume building platform.">
+    
+    <title>News | ResuMoose - AI Resume Builder</title>
+    
+    <!-- Import Outfit font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .news-container {
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .hero-header {
+            padding: 1.5rem 2rem;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: #d4af37;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #d4af37;
+        }
+
+        .enter-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #1a1a2e;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Main Content */
+        .news-main {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* News Grid */
+        .news-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .news-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .news-card.featured {
+            border-color: #d4af37;
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .news-date {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .news-category {
+            background: #d4af37;
+            color: #1a1a2e;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .news-title {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .news-excerpt {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .news-highlights {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .news-highlights h3 {
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .news-highlights ul {
+            list-style: none;
+        }
+
+        .news-highlights li {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .news-highlights li::before {
+            content: "▸";
+            color: #d4af37;
+            margin-right: 0.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .cta-btn.primary {
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #1a1a2e;
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .news-footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .news-title {
+                font-size: 1.4rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="news-container">
+        <!-- Header -->
+        <header class="hero-header">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <h1>RESUMOOSE</h1>
+                    </a>
+                </div>
+                <nav class="header-nav">
+                    <a href="/ai-tools" class="nav-link">AI TOOLS</a>
+                    <a href="/request-invite" class="nav-link">REQUEST INVITE</a>
+                    <a href="/news" class="nav-link active">NEWS</a>
+                    <a href="/founders" class="nav-link">FOUNDERS</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="/" class="enter-btn">HOME</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="news-main">
+            <div class="news-hero">
+                <h1 class="section-title">RESUMOOSE NEWS</h1>
+                <p class="hero-subtitle">Latest updates on AI-powered resume building</p>
+            </div>
+
+            <div class="news-grid">
+                <!-- Product Demo -->
+                <article class="news-card featured">
+                    <div class="news-header">
+                        <div class="news-date">August 2025</div>
+                        <div class="news-category">PRODUCT DEMO</div>
+                    </div>
+                    
+                    <h2 class="news-title">ResuMoose Demo Video Released</h2>
+                    
+                    <div class="news-content">
+                        <p class="news-excerpt">
+                            We've released our first comprehensive demo video showcasing how ResuMoose transforms 
+                            resume creation with AI-guided conversations that help you discover and articulate your 
+                            professional value.
+                        </p>
+                        
+                        <div class="news-highlights">
+                            <h3>What You'll See:</h3>
+                            <ul>
+                                <li>AI-guided comprehensive work history builder</li>
+                                <li>Real-time resume generation for any job</li>
+                                <li>How to articulate your unique professional value</li>
+                                <li>The end of generic, one-size-fits-all resumes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pilot Program -->
+                <article class="news-card">
+                    <div class="news-header">
+                        <div class="news-date">August 2025</div>
+                        <div class="news-category">PILOT PROGRAM</div>
+                    </div>
+                    
+                    <h2 class="news-title">Now Onboarding Test Users</h2>
+                    
+                    <div class="news-content">
+                        <p class="news-excerpt">
+                            ResuMoose is now accepting applications for our pilot program. We're looking for 
+                            job seekers ready to experience the future of resume building.
+                        </p>
+                        
+                        <div class="news-highlights">
+                            <h3>Pilot Program Includes:</h3>
+                            <ul>
+                                <li>Full access to AI-powered resume chat</li>
+                                <li>Unlimited resume generations</li>
+                                <li>Direct feedback channel to our team</li>
+                                <li>Early access to new features</li>
+                            </ul>
+                        </div>
+
+                        <div class="cta-buttons">
+                            <a href="/ai-tools" class="cta-btn primary">TRY RESUME CHAT</a>
+                            <a href="/request-invite" class="cta-btn secondary">REQUEST INVITE</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Coming Soon -->
+                <article class="news-card">
+                    <div class="news-header">
+                        <div class="news-date">Coming Soon</div>
+                        <div class="news-category">ROADMAP</div>
+                    </div>
+                    
+                    <h2 class="news-title">What's Next</h2>
+                    
+                    <div class="news-content">
+                        <p class="news-excerpt">
+                            Stay tuned for upcoming features and announcements as we continue building 
+                            the most intelligent resume creation platform.
+                        </p>
+                        
+                        <div class="news-highlights">
+                            <h3>On the Roadmap:</h3>
+                            <ul>
+                                <li>LinkedIn profile optimization</li>
+                                <li>Cover letter generation</li>
+                                <li>Interview preparation tools</li>
+                                <li>Job matching recommendations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="news-footer">
+            <p class="footer-text">© 2025 ResuMoose. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

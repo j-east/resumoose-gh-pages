@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request an invite to ResuMoose - Start your pilot program and transform your resume creation with AI-powered assistance.">
+    <meta name="keywords" content="ResuMoose, request invite, pilot program, AI resume builder, sign up">
+    <meta name="author" content="ResuMoose">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://resumoose.com/request-invite">
+    <meta property="og:title" content="Request Invite | ResuMoose">
+    <meta property="og:description" content="Join the ResuMoose pilot program and experience AI-powered resume building.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://resumoose.com/request-invite">
+    <meta property="twitter:title" content="Request Invite | ResuMoose">
+    <meta property="twitter:description" content="Join the ResuMoose pilot program and experience AI-powered resume building.">
+    
+    <title>Request Invite | ResuMoose - AI Resume Builder</title>
+    
+    <!-- Import Outfit font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .invite-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header-section {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .app-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+
+        /* Main Content */
+        .form-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        /* Form Styles */
+        .request-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .optional {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .char-counter {
+            text-align: right;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .submit-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #1a1a2e;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Info Sidebar */
+        .info-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .info-card h3 {
+            color: #d4af37;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer-section {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0.5rem;
+        }
+
+        .link {
+            color: #d4af37;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .link:hover {
+            color: #f4d03f;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .form-container {
+                grid-template-columns: 1fr;
+            }
+
+            .info-sidebar {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .info-sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .app-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invite-container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="logo-area">
+                <div class="logo-icon">🦌</div>
+                <h1 class="app-title">RESUMOOSE</h1>
+            </div>
+            <p class="tagline">Transform your resume creation with AI-powered assistance</p>
+        </div>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <!-- Main Content -->
+            <div class="content-section">
+                <h2>Start Your Pilot Program</h2>
+                <p class="description">
+                    ResuMoose transforms resume creation through AI-guided conversations that help you discover 
+                    and articulate your professional value. Tell us about yourself to begin your pilot program.
+                </p>
+
+                <!-- Request Form -->
+                <form class="request-form" action="https://resumoose.com/api/invite-request" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input 
+                                id="firstName"
+                                name="firstName"
+                                type="text"
+                                placeholder="Enter your first name"
+                                required
+                                maxlength="128">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input 
+                                id="lastName"
+                                name="lastName"
+                                type="text"
+                                placeholder="Enter your last name"
+                                required
+                                maxlength="128">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input 
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="Enter your email address"
+                            required
+                            maxlength="256">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number <span class="optional">(optional)</span></label>
+                        <input 
+                            id="phoneNumber"
+                            name="phoneNumber"
+                            type="tel"
+                            placeholder="Enter your phone number"
+                            maxlength="20">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Tell us about your career goals <span class="optional">(optional)</span></label>
+                        <textarea
+                            id="reason"
+                            name="reason"
+                            placeholder="Describe your current job search, career transition goals, or what you hope to achieve with a better resume..."
+                            rows="4"
+                            maxlength="500"></textarea>
+                        <div class="char-counter">0/500</div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            ✉️ Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Info Sidebar -->
+            <div class="info-sidebar">
+                <div class="info-card">
+                    <div class="info-icon">💬</div>
+                    <h3>AI-Guided Conversations</h3>
+                    <p>Our AI helps you discover and articulate your professional value through natural conversation.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📄</div>
+                    <h3>Unlimited Resumes</h3>
+                    <p>Generate tailored resumes for any job posting, highlighting the most relevant aspects of your experience.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🎯</div>
+                    <h3>Job-Specific Targeting</h3>
+                    <p>Each resume is optimized for the specific role you're applying to, increasing your chances of getting noticed.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">⚡</div>
+                    <h3>Quick Setup</h3>
+                    <p>Get started in minutes. Our AI guides you through building your comprehensive work history.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-section">
+            <p>
+                Already have access?
+                <a href="/login" class="link">Sign in here</a>
+            </p>
+            <p>
+                <a href="/ai-tools" class="link">Learn about our AI tools</a> |
+                <a href="/about" class="link">About ResuMoose</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Character counter for textarea
+        const textarea = document.getElementById('reason');
+        const counter = document.querySelector('.char-counter');
+        
+        textarea.addEventListener('input', function() {
+            counter.textContent = this.value.length + '/500';
+        });
+    </script>
+</body>
+</html>
