@@ -1,0 +1,16 @@
+# robots.txt for resumoose.com
+
+User-agent: *
+Allow: /
+
+# Disallow pages that shouldn't be indexed
+Disallow: /login
+Disallow: /signup
+Disallow: /dashboard
+Disallow: /mobile
+Disallow: /desktop
+Disallow: /admin
+Disallow: /webhook
+
+# Sitemap location
+Sitemap: https://resumoose.com/sitemap.xml

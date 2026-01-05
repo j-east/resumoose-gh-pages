@@ -37,12 +37,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://resumoose.com/login</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://resumoose.com/privacy</loc>
     <lastmod>2025-01-05</lastmod>
     <changefreq>yearly</changefreq>
