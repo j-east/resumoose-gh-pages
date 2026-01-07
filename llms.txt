@@ -61,7 +61,7 @@ Token-based model (not subscription) because resume building is "burst use" - ne
 - Website: https://resumoose.com
 - Schedule a demo: https://cal.com/john-evans-cev5jw
 - Email: support@resumoose.com
-- Sign up: https://resumoose.com/signup/product/resume-subscription
+- Sign up: https://resumoose.com/signup/product/resume-start
 
 ## Trust & Ethics
 
